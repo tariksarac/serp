@@ -1,0 +1,34 @@
+.result-item-picture {
+  width: 238px;
+  height: 238px;
+  background: url('../../../images/1 Copy.jpg');
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.result-item-picture .discount {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    background-color: #E74C3C;
+    margin-right: 0;
+    margin-left: auto;
+    transform: translateX(32px) translateY(-32px) rotate(45deg);
+}
+.result-item-picture .heart {
+
+}
+
+.result-item-picture .heart img {
+    position: relative;
+    top: -16px;
+    left: 103px;
+}
+
+.result-item-picture .reviews {
+ height: 30px;
+}

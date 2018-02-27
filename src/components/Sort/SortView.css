@@ -1,0 +1,99 @@
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    .sort-view {
+        height: 43px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        box-sizing: border-box;
+    }
+
+    .sort-view .sort-by p:after{
+        content: ':';
+    }
+
+    .my-drop-down > div:nth-child(1) > div:nth-child(2){
+        padding-left: 5px!important;
+    }
+
+   .my-drop-down > div:nth-child(1) > div:nth-child(4){
+       border-top: 0!important;
+    }
+
+    .sort-view .my-drop-down .drop-down-icon {
+        display: none;
+    }
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-width : 321px) {
+    /* Styles */
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width : 320px) {
+    /* Styles */
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+    /* Styles */
+}
+
+/* iPads (landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+    /* Styles */
+}
+
+/* iPads (portrait) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+    /* Styles */
+}
+/**********
+iPad 3
+**********/
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) and (-webkit-min-device-pixel-ratio : 2) {
+    /* Styles */
+}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio : 2) {
+    /* Styles */
+}
+/* Desktops and laptops ----------- */
+@media only screen  and (min-width : 1224px) {
+    .sort-view {
+        height: 110px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        padding-bottom: 20px;
+        box-sizing: border-box;
+        float: right;
+    }
+
+    .sort-view .my-drop-down{
+        background-color: #FFFFFF;
+        width: 129px !important;
+        height: 43px !important;
+        margin-left: 12px;
+        border: 1px solid #CCCCCC;
+    }
+
+    .my-drop-down > div:nth-child(1) > div:nth-child(4){
+        border-top: 0!important;
+    }
+
+    .sort-view .my-drop-down .drop-down-icon {
+        width: 8px;
+        height: 8px;
+        transform: rotate(45deg);
+        border-bottom: 1px solid gray;
+        border-right: 1px solid gray;
+    }
+}
+
+/* Large screens ----------- */
+@media only screen  and (min-width : 1824px) {
+    /* Styles */
+}
+

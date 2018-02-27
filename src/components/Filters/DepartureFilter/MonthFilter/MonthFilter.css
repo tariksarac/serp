@@ -1,0 +1,12 @@
+.month-filter-box {
+display: flex;
+    font-family: Helvetica;
+    font-size: 14px;
+    width: 144px;
+    height: 17px;
+    padding-bottom: 11px;
+}
+
+.month-filter-box .month-result {
+
+}
