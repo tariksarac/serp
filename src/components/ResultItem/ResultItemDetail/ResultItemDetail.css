@@ -1,5 +1,198 @@
-.result-item-detail {
-    width: 238px;
-    height: 238px;
-    background-color: #FFFFFF;
+
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    .result-item-detail {
+        /*width: 238px;*/
+        /*height: 238px;*/
+        background-color: #FFFFFF;
+        padding: 20px 20px 30px 20px;
+        box-sizing: border-box;
+    }
+
+    .result-item-detail .price {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .result-item-detail .price .total {
+        font-family: Helvetica;
+        font-weight: 900;
+        font-size: 18px;
+        color: #333333;
+        letter-spacing: 0;
+        line-height: 24px;
+        padding-bottom: 5px;
+    }
+
+    .result-item-detail .price .amount {
+        display: flex;
+        font-family: Helvetica;
+        font-size: 18px;
+        color: #333333;
+        line-height: 23px;
+        padding-bottom: 20px;
+    }
+
+    .result-item-detail .remain-seats-box {
+        padding: 10px;
+        border-bottom: 2px solid #f2f2f2;
+        border-top: 2px solid #f2f2f2;
+
+    }
+    .result-item-detail .remain-seats-box .remain-seats-item {
+        display: flex;
+        justify-content: space-between;
+    }
+    .result-item-detail .remain-seats-box .remain-seats-item .date {
+        font-family: Helvetica;
+        font-size: 12px;
+        color: #333333;
+        line-height: 20px;
+    }
+    .result-item-detail .remain-seats-box .remain-seats-item .seats {
+        font-family: Helvetica;
+        font-size: 12px;
+        color: #333333;
+        line-height: 20px;
+    }
+
+    .result-item-detail .view-more {
+        background: #409CD1;
+        border-radius: 1px;
+        height: 32px;
+        font-family: Helvetica;
+        font-size: 14px;
+        color: #FFFFFF;
+        letter-spacing: 0;
+        line-height: 18px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 23px;
+    }
+
+
+
 }
+
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-width : 321px) {
+    /* Styles */
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width : 320px) {
+    /* Styles */
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+    /* Styles */
+}
+
+/* iPads (landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+    /* Styles */
+}
+
+/* iPads (portrait) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+    /* Styles */
+}
+/**********
+iPad 3
+**********/
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) and (-webkit-min-device-pixel-ratio : 2) {
+    /* Styles */
+}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio : 2) {
+    /* Styles */
+}
+/* Desktops and laptops ----------- */
+@media only screen  and (min-width : 1224px) {
+    .result-item-detail {
+        width: 238px;
+        /*height: 238px;*/
+        background-color: #FFFFFF;
+        padding: 20px 20px 30px 20px;
+        box-sizing: border-box;
+    }
+
+    .result-item-detail .price {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .result-item-detail .price .total {
+        font-family: Helvetica;
+        font-weight: 900;
+        font-size: 18px;
+        color: #333333;
+        letter-spacing: 0;
+        line-height: 24px;
+        padding-bottom: 5px;
+    }
+
+    .result-item-detail .price .amount {
+        display: flex;
+        font-family: Helvetica;
+        font-size: 18px;
+        color: #333333;
+        line-height: 23px;
+        padding-bottom: 20px;
+    }
+
+    .result-item-detail .remain-seats-box {
+        padding: 10px;
+        border-bottom: 2px solid #f2f2f2;
+        border-top: 2px solid #f2f2f2;
+        max-height: 40px;
+        overflow: auto;
+    }
+    .result-item-detail .remain-seats-box .remain-seats-item {
+        display: flex;
+        justify-content: space-between;
+    }
+    .result-item-detail .remain-seats-box .remain-seats-item .date {
+        font-family: Helvetica;
+        font-size: 12px;
+        color: #333333;
+        line-height: 20px;
+    }
+    .result-item-detail .remain-seats-box .remain-seats-item .seats {
+        font-family: Helvetica;
+        font-size: 12px;
+        color: #333333;
+        line-height: 20px;
+    }
+
+    .result-item-detail .view-more {
+        background: #409CD1;
+        border-radius: 1px;
+        height: 32px;
+        font-family: Helvetica;
+        font-size: 14px;
+        color: #FFFFFF;
+        letter-spacing: 0;
+        line-height: 18px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 23px;
+    }
+
+
+
+}
+
+/* Large screens ----------- */
+@media only screen  and (min-width : 1824px) {
+    /* Styles */
+}
+
+
+

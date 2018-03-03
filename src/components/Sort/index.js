@@ -7,7 +7,6 @@ class SortView extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = { value: 1 };
   }
   render() {
     const labelStyle = {
@@ -24,24 +23,27 @@ class SortView extends React.Component {
       top: '13px',
       border: '0px',
     };
+    const activeItemStyle = {
+      color: '#409CD1'
+    };
     return (
       <div className="sort-view">
         <div className="sort-by">
           <p>Sort by</p>
         </div>
         <DropDownMenu
-          value={this.state.value}
-          onChange={this.handleChange}
+          value={this.props.selectedSort}
+          onChange={this.props.handleSort}
           className="my-drop-down"
           labelStyle={labelStyle}
           iconStyle={iconStyle}
+          selectedMenuItemStyle={activeItemStyle}
           iconButton={<div className='drop-down-icon'/>}
         >
-          <MenuItem value={1} primaryText="Never" />
-          <MenuItem value={2} primaryText="Every Night" />
-          <MenuItem value={3} primaryText="Weeknights" />
-          <MenuItem value={4} primaryText="Weekends" />
-          <MenuItem value={5} primaryText="Weekly" />
+          <MenuItem value={'id'} primaryText="Date" />
+          <MenuItem value={'rating'} primaryText="Popularity" />
+          <MenuItem value={'length'} primaryText="Duration" />
+
         </DropDownMenu>
         <div className="switch-button" />
       </div>

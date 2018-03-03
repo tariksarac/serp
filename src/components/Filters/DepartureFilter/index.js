@@ -14,20 +14,27 @@ class DepartureFilter extends React.Component {
     };
   }
 
-  handleSelectMonth = key => {
+  handleSelectMonth = (key,monthItem) => {
     this.setState({ selectedMonth: key });
+    this.props.handleDepartureFilter(monthItem)
   };
+
+    handleChange = (e, date) => {
+        this.props.handleDateFilter(date)
+    }
   render() {
     return (
       <div className="departure-filter">
         <div className="departure">Departure date</div>
         <div className="month-filters">
-          {[1, 2, 3, 4, 5].map((item, index) => (
+          {this.props.filteredData.map((item, index) => (
             <MonthFilter
               key={index}
               monthIndex={index}
-              active={index === this.state.selectedMonth}
+              active={item.filter === this.props.selectedDepartureFilter}
               onClickAction={this.handleSelectMonth}
+              monthItem={item}
+              selectedDepartureFilter={this.props.selectedDepartureFilter}
             />
           ))}
         </div>

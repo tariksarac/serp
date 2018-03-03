@@ -1,7 +1,191 @@
-.result-item-description {
-  width: 371.7px;
-  height: 238px;
-    background-color: #CCCCCC;
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+  .result-item-description {
+    /*width: 371.7px;*/
+    margin-bottom: 2px;
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 22px 32px 22px;
+    box-sizing: border-box;
+  }
+  .result-item-description .description-header {
+    font-family: Helvetica;
+    font-weight: 900;
+    font-size: 18px;
+    color: #333333;
+    letter-spacing: 0;
+    line-height: 24px;
+  }
+
+  .result-item-description .description-description {
+    font-family: Helvetica-Oblique;
+    font-size: 12px;
+    color: #333333;
+    letter-spacing: 0;
+    line-height: 21px;
+    padding-bottom: 20px;
+  }
+
+  .result-item-description .description-item {
+    display: flex;
+    justify-content: flex-start;
+    padding-bottom: 4px;
+  }
+
+  .result-item-description .description-item .description-item-title {
+    font-family: Helvetica;
+    font-size: 10px;
+    color: #999999;
+    letter-spacing: 0;
+    line-height: 18px;
+    width: 115px;
+  }
+
+  .result-item-description .description-item .description-item-value {
+    font-family: Helvetica;
+    font-size: 12px;
+    color: #333333;
+    letter-spacing: 0;
+    line-height: 20px;
+  }
+
 }
-.result-item-description {
+
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-width : 321px) {
+  /* Styles */
 }
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width : 320px) {
+  /* Styles */
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+  /* Styles */
+}
+
+/* iPads (landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+  /* Styles */
+}
+
+/* iPads (portrait) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+  /* Styles */
+}
+/**********
+iPad 3
+**********/
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) and (-webkit-min-device-pixel-ratio : 2) {
+  /* Styles */
+}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio : 2) {
+  /* Styles */
+}
+/* Desktops and laptops ----------- */
+@media only screen  and (min-width : 1224px) {
+  .result-item-description {
+    width: 371.7px;
+    margin-right: 2px;
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 22px 32px 22px;
+    box-sizing: border-box;
+  }
+  .result-item-description .description-header {
+    font-family: Helvetica;
+    font-weight: 900;
+    font-size: 18px;
+    color: #333333;
+    letter-spacing: 0;
+    line-height: 24px;
+  }
+
+  .result-item-description .description-description {
+    font-family: Helvetica-Oblique;
+    font-size: 12px;
+    color: #333333;
+    letter-spacing: 0;
+    line-height: 21px;
+    padding-bottom: 20px;
+  }
+
+  .result-item-description .description-item {
+    display: flex;
+    justify-content: flex-start;
+    padding-bottom: 4px;
+  }
+
+  .result-item-description .description-item .description-item-title {
+    font-family: Helvetica;
+    font-size: 10px;
+    color: #999999;
+    letter-spacing: 0;
+    line-height: 18px;
+    width: 115px;
+  }
+
+  .result-item-description .description-item .description-item-value {
+    font-family: Helvetica;
+    font-size: 12px;
+    color: #333333;
+    letter-spacing: 0;
+    line-height: 20px;
+  }
+
+  .result-item-description .description-description p{
+    margin: 0;
+    /* hide text if it more than N lines  */
+    overflow: hidden;
+    /* for set '...' in absolute position */
+    position: relative;
+    /* use this value to count block height */
+    /*line-height: 1.2em;*/
+    /* max-height = line-height (1.2) * lines max number (3) */
+height: 42px   ;
+    /* fix problem when last visible word doesn't adjoin right side  */
+    text-align: justify;
+    /* place for '...' */
+    margin-right: -1em;
+    padding-right: 1em;
+  }
+  /* create the ... */
+  .result-item-description .description-description p:before {
+    /* points in the end */
+    content: '...';
+    /* absolute position */
+    position: absolute;
+    /* set position to right bottom corner of block */
+    right: 0;
+    bottom: 0;
+  }
+  /* hide ... if we have text, which is less than or equal to max lines */
+  .result-item-description .description-description p:after {
+    /* points in the end */
+    content: '';
+    /* absolute position */
+    position: absolute;
+    /* set position to right bottom corner of text */
+    right: 0;
+    /* set width and height */
+    width: 1em;
+    height: 1em;
+    margin-top: 0.2em;
+    /* bg color = bg color under block */
+    background: white;
+  }
+
+}
+
+/* Large screens ----------- */
+@media only screen  and (min-width : 1824px) {
+  /* Styles */
+}
+
+
+

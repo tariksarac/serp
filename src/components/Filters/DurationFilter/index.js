@@ -15,6 +15,16 @@ class DurationFilter extends React.Component {
             },
         }
     }
+
+    componentWillReceiveProps(nextProps){
+        if(nextProps.selectedRangeDuration){
+            this.setState({ value: nextProps.selectedRangeDuration.value})
+        }
+    }
+
+    handleOnChange = (range) => {
+        this.props.handleDurationsFilter(range)
+    }
     render(){
         return (
             <div className="duration-filter">
@@ -25,7 +35,8 @@ class DurationFilter extends React.Component {
                         minValue={0}
                         formatLabel={value => `${value} days`}
                         value={this.state.value}
-                        onChange={value => this.setState({ value: value })}
+                        // onChange={value => this.setState({ value: value })}
+                        onChange={value => this.handleOnChange({value })}
                         onChangeComplete={value => console.log(value)} />
                 </form>
 

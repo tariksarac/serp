@@ -15,7 +15,6 @@
 
   .content {
     grid-column: main;
-    background-color: gray;
     /*height: 450px;*/
     order: 3;
   }
@@ -67,12 +66,13 @@ iPad 3
   .App {
     /*text-align: center;*/
     display: grid;
-    grid-template-columns: [main-start] 260px [content-start] 870px [content-end main-end];
+    grid-template-columns: [main-start] 260px [content-start] 850px [content-end main-end];
     grid-template-rows: [main-start] 110px [content-start] auto [content-end main-end] ;
+    grid-column-gap: 32px;
   }
 
   .sort {
-    grid-column: main;
+    grid-column: content;
     display: flex;
     justify-content: flex-end;
     /*height: 50px;*/
