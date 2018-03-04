@@ -1,9 +1,8 @@
 
 
 /* Smartphones (portrait and landscape) ----------- */
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+@media only screen and (min-device-width : 320px) and (max-device-width : 767px) {
     .result-item-picture {
-        /*width: 238px;*/
         height: 238px;
         background: url('../../../images/1 Copy.jpg');
         background-size: cover;
@@ -59,7 +58,6 @@
         align-items: flex-end;
     }
 
-
 }
 
 /* Smartphones (landscape) ----------- */
@@ -74,7 +72,61 @@
 
 /* iPads (portrait and landscape) ----------- */
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
-    /* Styles */
+    .result-item-picture {
+        height: 238px;
+        background: url('../../../images/1 Copy.jpg');
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        overflow: hidden;
+        box-sizing: border-box;
+    }
+
+    .result-item-picture .discount {
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        width: 64px;
+        height: 64px;
+        background-color: #E74C3C;
+        color: #FFFFFF;
+        font-size: 15px;
+        margin-right: 0;
+        margin-left: auto;
+        transform: translateX(32px) translateY(-32px) rotate(45deg);
+    }
+    .result-item-picture .heart {
+        display: flex;
+        justify-content: center;
+    }
+
+    .result-item-picture .heart img {
+        position: relative;
+        top: -16px;
+        /*left: 103px;*/
+    }
+
+    .result-item-picture .reviews-box {
+        height: 30px;
+        display: -ms-flexbox;
+        display: flex;
+        justify-content: space-between;
+        font-family: Helvetica;
+        font-size: 10px;
+        color: #FFFFFF;
+        line-height: 18px;
+        padding: 0 10px 5px 10px;
+    }
+    .result-item-picture .reviews-box  .stars {
+        padding-bottom: 8px;
+        display: flex;
+        align-items: flex-end;
+    }
+    .result-item-picture .reviews-box  .reviews {
+        display: flex;
+        align-items: flex-end;
+    }
 }
 
 /* iPads (landscape) ----------- */
@@ -97,7 +149,7 @@ iPad 3
     /* Styles */
 }
 /* Desktops and laptops ----------- */
-@media only screen  and (min-width : 1224px) {
+@media only screen  and (min-width : 1024px) {
     .result-item-picture {
         width: 238px;
         height: 238px;

@@ -1,27 +1,37 @@
 import React from 'react';
 import './DepartureFilter.css';
 import MonthFilter from './MonthFilter/index';
-import { DatePicker} from 'material-ui';
+import { DatePicker } from 'material-ui';
 import CalendarTextIcon from 'mdi-react/CalendarTextIcon';
-import {textFieldStyle} from "../../../utils/constants";
+import { textFieldStyle } from '../../../utils/constants';
 
 class DepartureFilter extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      selectedMonth: 0
+      selectedMonth: 0,
+      selectedSpecificDate: null
     };
   }
 
-  handleSelectMonth = (key,monthItem) => {
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.selectedSpecificDate) {
+      this.setState({ selectedSpecificDate: nextProps.selectedSpecificDate });
+    }
+    if (nextProps.selectedSpecificDate === null) {
+      this.setState({ selectedSpecificDate: null });
+    }
+  }
+
+  handleSelectMonth = (key, monthItem) => {
     this.setState({ selectedMonth: key });
-    this.props.handleDepartureFilter(monthItem)
+    this.props.handleDepartureFilter(monthItem);
   };
 
-    handleChange = (e, date) => {
-        this.props.handleDateFilter(date)
-    }
+  handleChange = (e, date) => {
+    this.props.handleDateFilter(date);
+  };
   render() {
     return (
       <div className="departure-filter">
@@ -39,14 +49,15 @@ class DepartureFilter extends React.Component {
           ))}
         </div>
 
-          <DatePicker
-            onChange={this.handleChange}
-            hintText={<CalendarHitnComponent />}
-            container="inline"
-            textFieldStyle={textFieldStyle}
-            dialogContainerStyle={{ maxWidth: '260px' }}
-            className={'my-date-picker'}
-          />
+        <DatePicker
+          onChange={this.handleChange}
+          hintText={<CalendarHitnComponent />}
+          container="inline"
+          textFieldStyle={textFieldStyle}
+          dialogContainerStyle={{ maxWidth: '260px' }}
+          className={'my-date-picker'}
+          value={this.state.selectedSpecificDate}
+        />
       </div>
     );
   }

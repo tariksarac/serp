@@ -5,8 +5,8 @@ import './MonthFilter.css';
 
 const MonthFilter = ({ monthIndex, active, onClickAction, monthItem }) => {
   return (
-    <div className="month-filter-box" onClick={() => onClickAction(monthIndex, monthItem.filter)} style={{ color: active && '#409CD1' }}>
-      <div className="month-result">{`${monthItem.filter} (${monthItem.count})`} </div>
+    <div className="month-filter-box" onClick={() => onClickAction(monthIndex, monthItem.filter)} >
+      <div className="month-result" style={{ color: active && '#409CD1', fontWeight: active && 900 }}>{`${monthItem.filter} (${monthItem.count})`} </div>
     </div>
   );
 };

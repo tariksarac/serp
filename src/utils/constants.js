@@ -21,3 +21,21 @@ export const textFieldStyle = {
     alignItems: 'center',
     marginTop: '4px'
 }
+
+export const labelStyle = {
+    height: '43px',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+
+};
+export const iconStyle = {
+    height: 'auto',
+    width:'auto',
+    padding: '0px,',
+    top: '13px',
+    border: '0px',
+};
+export const activeItemStyle = {
+    color: '#409CD1'
+};

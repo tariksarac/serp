@@ -1,5 +1,5 @@
 /* Smartphones (portrait and landscape) ----------- */
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+@media only screen and (min-device-width : 320px) and (max-device-width : 767px) {
   .departure-filter {
     background-color: #ffffff;
     padding-top: 18px;
@@ -14,6 +14,78 @@
     font-size: 14px;
     padding-bottom: 13px;
     padding-left: 40px;
+    color: #333333;
+    line-height: 20px;
+  }
+
+  .departure-filter .month-filters {
+    padding-left: 70px;
+  }
+
+
+  .departure-filter .my-date-picker {
+    width: 254px;
+    margin: 0 auto;
+  }
+
+  .departure-filter .my-date-picker hr{
+    display: none;
+  }
+
+  .departure-filter .my-date-picker input{
+    padding: 10px !important;
+  }
+
+  .departure-filter .my-date-picker .calendar-icon-main {
+    position: absolute;
+    bottom: -8px;
+    left: 10px;
+    width: 200px;
+    display: flex;
+  }
+
+  .departure-filter .my-date-picker .calendar-icon {
+    opacity: 0.3;
+  }
+
+  .departure-filter .my-date-picker .placeholder {
+    padding-left: 5px;
+    font-size: 14px;
+    font-family: Helvetica;
+    color: #999999;
+    letter-spacing: 0;
+  }
+
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-width : 321px) {
+  /* Styles */
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width : 320px) {
+  /* Styles */
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+  .departure-filter {
+    background-color: #ffffff;
+    padding-top: 18px;
+    padding-bottom: 47px;
+    margin-bottom: 10px;
+  }
+
+  .departure-filter .departure {
+    height: 20px;
+    font-weight: 900;
+    font-family: Helvetica;
+    font-size: 14px;
+    padding-bottom: 13px;
+    padding-left: 40px;
+    color: #333333;
+    line-height: 20px;
   }
 
   .departure-filter .month-filters {
@@ -43,29 +115,17 @@
   }
 
   .departure-filter .my-date-picker .calendar-icon {
-    opacity: 0.5;
+    opacity: 0.3;
   }
 
   .departure-filter .my-date-picker .placeholder {
-    color: #CCCCCC;
     padding-left: 5px;
+    font-size: 14px;
+    font-family: Helvetica;
+    color: #999999;
+    letter-spacing: 0;
   }
 
-}
-
-/* Smartphones (landscape) ----------- */
-@media only screen and (min-width : 321px) {
-  /* Styles */
-}
-
-/* Smartphones (portrait) ----------- */
-@media only screen and (max-width : 320px) {
-  /* Styles */
-}
-
-/* iPads (portrait and landscape) ----------- */
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
-  /* Styles */
 }
 
 /* iPads (landscape) ----------- */
@@ -88,7 +148,7 @@ iPad 3
   /* Styles */
 }
 /* Desktops and laptops ----------- */
-@media only screen  and (min-width : 1224px) {
+@media only screen  and (min-width : 1024px) {
   .departure-filter {
     background-color: #ffffff;
     padding-top: 18px;
@@ -132,13 +192,17 @@ iPad 3
   }
 
   .departure-filter .my-date-picker .calendar-icon {
-    opacity: 0.5;
+    opacity: 0.3;
   }
 
   .departure-filter .my-date-picker .placeholder {
-    color: #CCCCCC;
     padding-left: 5px;
+    font-size: 14px;
+    font-family: Helvetica;
+    color: #999999;
+    letter-spacing: 0;
   }
+
 
 }
 

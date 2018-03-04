@@ -1,6 +1,6 @@
 
 /* Smartphones (portrait and landscape) ----------- */
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+@media only screen and (min-device-width : 320px) and (max-device-width : 767px) {
   .result-item {
     display: flex;
     flex-direction: column;
@@ -22,7 +22,12 @@
 
 /* iPads (portrait and landscape) ----------- */
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
-  /* Styles */
+  .result-item {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+  }
 }
 
 /* iPads (landscape) ----------- */
@@ -45,7 +50,7 @@ iPad 3
   /* Styles */
 }
 /* Desktops and laptops ----------- */
-@media only screen  and (min-width : 1224px) {
+@media only screen  and (min-width : 1024px) {
   .result-item {
     display: flex;
     margin-bottom: 30px;

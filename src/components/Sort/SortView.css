@@ -1,11 +1,31 @@
 /* Smartphones (portrait and landscape) ----------- */
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+@media only screen and (min-device-width : 320px) and (max-device-width : 767px) {
+    .my-drop-down {
+        height: 43px !important;
+        color: #409CD1 !important;
+    }
     .sort-view {
         height: 43px;
         display: flex;
         justify-content: center;
         align-items: flex-end;
         box-sizing: border-box;
+        border-top: 1px solid #409CD1;
+        border-bottom: 1px solid #409CD1;
+        margin-bottom: 20px;
+        background: #FFFFFF;
+        border-radius: 1px;
+    }
+
+    .sort-view .sort-by {
+        display: flex;
+        align-items: center;
+        height: 43px;
+    }
+
+    .sort-view .sort-by p{
+        color: #409CD1;
+        margin: 0 !important;
     }
 
     .sort-view .sort-by p:after{
@@ -23,6 +43,17 @@
     .sort-view .my-drop-down .drop-down-icon {
         display: none;
     }
+
+    .my-drop-down > div:nth-child(1) > div:nth-child(2) {
+        color: #409CD1 !important;
+    }
+
+    body > div:nth-child(5) > div:nth-child(1) {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        left: 0;
+    }
 }
 
 /* Smartphones (landscape) ----------- */
@@ -37,7 +68,60 @@
 
 /* iPads (portrait and landscape) ----------- */
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
-    /* Styles */
+    .my-drop-down {
+        height: 43px !important;
+        color: #409CD1 !important;
+    }
+    .sort-view {
+        height: 43px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        box-sizing: border-box;
+        border-top: 1px solid #409CD1;
+        border-bottom: 1px solid #409CD1;
+        margin-bottom: 20px;
+        background: #FFFFFF;
+        border-radius: 1px;
+    }
+
+    .sort-view .sort-by {
+        display: flex;
+        align-items: center;
+        height: 43px;
+    }
+
+    .sort-view .sort-by p{
+        color: #409CD1;
+        margin: 0 !important;
+    }
+
+    .sort-view .sort-by p:after{
+        content: ':';
+    }
+
+    .my-drop-down > div:nth-child(1) > div:nth-child(2){
+        padding-left: 5px!important;
+    }
+
+    .my-drop-down > div:nth-child(1) > div:nth-child(4){
+        border-top: 0!important;
+    }
+
+    .sort-view .my-drop-down .drop-down-icon {
+        display: none;
+    }
+
+    .my-drop-down > div:nth-child(1) > div:nth-child(2) {
+        color: #409CD1 !important;
+    }
+
+    body > div:nth-child(5) > div:nth-child(1) {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        left: 0;
+    }
 }
 
 /* iPads (landscape) ----------- */
@@ -60,7 +144,7 @@ iPad 3
     /* Styles */
 }
 /* Desktops and laptops ----------- */
-@media only screen  and (min-width : 1224px) {
+@media only screen  and (min-width : 1024px) {
     .sort-view {
         height: 110px;
         display: flex;

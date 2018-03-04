@@ -7,6 +7,7 @@ import { muiTheme } from './utils/constants';
 import ResultItem from './components/ResultItem/index';
 import LazyLoad from 'react-lazyload';
 import * as moment from 'moment';
+import { mapToFilters } from './utils/helper';
 
 class App extends Component {
   constructor(props) {
@@ -14,18 +15,23 @@ class App extends Component {
 
     this.state = {
       resultData: [],
-      selectedSort: 'id',
+      selectedSort: null,
       selectedDepartureFilter: null,
       selectedSpecificDate: null,
       selectedRangeDuration: null,
-      filteredData: []
+      filteredData: [],
+      filterNodesData: []
     };
   }
 
   componentDidMount() {
     fetch('https://api.myjson.com/bins/oivjj').then(response => {
-      response.text().then(text => {
-        this.setState({ resultData: JSON.parse(text), filteredData: JSON.parse(text) });
+      response.text().then(data => {
+        this.setState({
+          resultData: JSON.parse(data),
+          filteredData: JSON.parse(data),
+          filterNodesData: mapToFilters(JSON.parse(data))
+        });
       });
     });
   }
@@ -39,7 +45,7 @@ class App extends Component {
       selectedDepartureFilter: null,
       selectedSpecificDate: selectedDate,
       filteredData: this.state.resultData.filter(item =>
-        item.dates.some(date => moment(date.start).format('MM-DD-YYYY') == moment(selectedDate).format('MM-DD-YYYY'))
+        item.dates.some(date => moment(date.start).format('MM-DD-YYYY') === moment(selectedDate).format('MM-DD-YYYY'))
       )
     });
 
@@ -49,40 +55,26 @@ class App extends Component {
         item.dates.find(date => moment(date.start).format('MMM YYYY') === filter)
       ),
       selectedDepartureFilter: filter,
-      selectedSpecificDate: null
+      selectedSpecificDate: null,
+      selectedRangeDuration: null
     });
   };
 
   handleDurationsFilter = range => {
-    this.setState({
-      selectedRangeDuration: range,
-      filteredData: this.state.resultData.filter(
-        item => item.length >= range.value.min && item.length <= range.value.max
-      )
-    });
-  };
-
-  mapToFilters = () => {
-    let filtered = [];
-    this.state.resultData.forEach(result => {
-      let futureDates = result.dates.filter(date => moment() < moment(date.start));
-      futureDates.forEach(date => {
-        let monthItem = moment(date.start).format('MMM YYYY');
-        let target = filtered.findIndex(item => item.filter === monthItem);
-
-        if (target !== -1) {
-          filtered[target].count += 1;
-        } else {
-          filtered.push({ filter: monthItem, count: 1 });
-        }
-      });
-    });
-    return filtered;
+    let data = [];
+    if (range) {
+      data = this.state.resultData.filter(item => item.length >= range.value.min && item.length <= range.value.max);
+    }
+    if (this.state.selectedDepartureFilter) {
+      data = data.filter(item =>
+        item.dates.find(date => moment(date.start).format('MMM YYYY') === this.state.selectedDepartureFilter)
+      );
+    }
+    this.setState({ filteredData: data, selectedRangeDuration: range });
   };
 
   render() {
-    let results = [...this.state.filteredData.sort((a,b) => b[this.state.selectedSort] - a[this.state.selectedSort])];
-    let departureFilters = this.mapToFilters();
+    let results = [...this.state.filteredData.sort((a, b) => b[this.state.selectedSort] - a[this.state.selectedSort])];
 
     return (
       <MuiThemeProvider muiTheme={muiTheme}>
@@ -93,15 +85,17 @@ class App extends Component {
           <div className="filter">
             <FiltersView
               handleDateFilter={this.handleDateFilter}
-              filteredData={departureFilters.filter((item, index) => !(index > 5))}
+              filteredData={this.state.filterNodesData}
               handleDepartureFilter={this.handleDepartureFilter}
               selectedDepartureFilter={this.state.selectedDepartureFilter}
               selectedRangeDuration={this.state.selectedRangeDuration}
               handleDurationsFilter={this.handleDurationsFilter}
+              selectedSpecificDate={this.state.selectedSpecificDate}
             />
           </div>
-          <LazyLoad height={300} once>
-            <div className="content">
+
+          <div className="content">
+            <LazyLoad height={300} once>
               {results.map((item, index) => (
                 <ResultItem
                   key={item.id}
@@ -110,8 +104,8 @@ class App extends Component {
                   selectedSpecificDate={this.state.selectedSpecificDate}
                 />
               ))}
-            </div>
-          </LazyLoad>
+            </LazyLoad>
+          </div>
         </div>
       </MuiThemeProvider>
     );

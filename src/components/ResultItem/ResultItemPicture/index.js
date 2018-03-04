@@ -4,10 +4,13 @@ import './ResultItemPicture.css';
 const heart = require('../../../images/HEART.svg');
 
 const ResultItemPicture = ({ images, rating, reviews, discount }) => {
-    let image = images.find(item => item.is_primary)
+  let image = images.find(item => item.is_primary);
+  if(!image){
+      image = images[0]
+  }
   return (
-    <div className="result-item-picture" style={{background:image && `url(${image.url})`}}>
-        <div className="discount" style={{visibility: !discount.discount && 'hidden'}}>{`-${discount.discount}`}</div>
+    <div className="result-item-picture" style={{ background: image && `url(${image.url})`, backgroundSize: 'cover' }}>
+      <div className="discount" style={{ visibility: !discount.discount && 'hidden' }}>{`-${discount.discount}`}</div>
       <div className="heart">
         <img src={heart} />
       </div>

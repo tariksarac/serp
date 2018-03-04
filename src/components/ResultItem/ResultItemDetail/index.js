@@ -50,7 +50,7 @@ const MonthSeatsItem = ({item}) => {
     return (
         <div className="remain-seats-item">
             <div className="date">{`${moment(item.start).format('D MMM')}`}</div>
-            <div className="seats">{`${item.availability} seats left`}</div>
+            <div className="seats" style={{color: item.availability <=3 && '#E74C3C'}}>{`${item.availability} seats left`}</div>
         </div>
     )
 }

@@ -1,5 +1,5 @@
 /* Smartphones (portrait and landscape) ----------- */
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+@media only screen and (min-device-width : 320px) and (max-device-width : 767px) {
     .duration-filter {
         background-color: #ffffff;
         padding-top: 18px;
@@ -13,7 +13,6 @@
         font-size: 14px;
         padding-bottom: 13px;
         padding-left: 40px;
-        padding-bottom: 32px;
     }
     .duration-filter .form {
         margin: 0 auto;
@@ -53,7 +52,44 @@
 
 /* iPads (portrait and landscape) ----------- */
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
-    /* Styles */
+    .duration-filter {
+        background-color: #ffffff;
+        padding-top: 18px;
+        padding-bottom: 25px;
+    }
+
+    .duration-filter .duration {
+        height: 20px;
+        font-weight: 900;
+        font-family: Helvetica;
+        font-size: 14px;
+        padding-bottom: 13px;
+        padding-left: 40px;
+    }
+    .duration-filter .form {
+        margin: 0 auto;
+    }
+
+    .input-range {
+        width: 255px !important;
+        margin: 0 auto;
+    }
+
+    .input-range__label--min {
+        display: none;
+    }
+    .input-range__label--max {
+        display: none;
+    }
+
+    .input-range__slider {
+        background-color: #FFFFFF  !important;
+        border: 1px solid #409CD1 !important;
+    }
+
+    .input-range__track--active {
+        background: #409CD1  !important;
+    }
 }
 
 /* iPads (landscape) ----------- */
@@ -76,7 +112,7 @@ iPad 3
     /* Styles */
 }
 /* Desktops and laptops ----------- */
-@media only screen  and (min-width : 1224px) {
+@media only screen  and (min-width : 1024px) {
     .duration-filter {
         background-color: #ffffff;
         padding-top: 18px;

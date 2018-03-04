@@ -3,7 +3,15 @@ import './FiltersView.css';
 import DepartureFilter from './DepartureFilter/index';
 import DurationFilter from './DurationFilter/index';
 
-const FiltersView = ({ handleDepartureFilter, filteredData, selectedDepartureFilter, handleDateFilter, selectedRangeDuration, handleDurationsFilter }) => {
+const FiltersView = ({
+  handleDepartureFilter,
+  filteredData,
+  selectedDepartureFilter,
+  handleDateFilter,
+  selectedRangeDuration,
+  handleDurationsFilter,
+  selectedSpecificDate
+}) => {
   return (
     <div className="filters-view">
       <div className="filter-by">Filters By:</div>
@@ -12,8 +20,9 @@ const FiltersView = ({ handleDepartureFilter, filteredData, selectedDepartureFil
         filteredData={filteredData}
         selectedDepartureFilter={selectedDepartureFilter}
         handleDateFilter={handleDateFilter}
+        selectedSpecificDate={selectedSpecificDate}
       />
-      <DurationFilter selectedRangeDuration={selectedRangeDuration} handleDurationsFilter={handleDurationsFilter}/>
+      <DurationFilter selectedRangeDuration={selectedRangeDuration} handleDurationsFilter={handleDurationsFilter} />
     </div>
   );
 };

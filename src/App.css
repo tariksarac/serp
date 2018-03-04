@@ -1,5 +1,5 @@
 /* Smartphones (portrait and landscape) ----------- */
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+@media only screen and (min-device-width : 320px) and (max-device-width : 767px) {
   .App {
     /*text-align: center;*/
     display: grid;
@@ -39,7 +39,30 @@
 
 /* iPads (portrait and landscape) ----------- */
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
-  /* Styles */
+  .App {
+    /*text-align: center;*/
+    display: grid;
+    grid-template-columns: [main-start] auto [main-end];
+    grid-template-rows: [main-start] auto [content-end main-end] ;
+  }
+
+  .sort {
+    grid-column: main;
+    /*height: 50px;*/
+    order: 2;
+  }
+
+  .content {
+    grid-column: main;
+    /*height: 450px;*/
+    order: 3;
+  }
+
+  .filter {
+    grid-column-start: main;
+    /*grid-row-start: content;*/
+    order: 1;
+  }
 }
 
 /* iPads (landscape) ----------- */
@@ -62,13 +85,14 @@ iPad 3
   /* Styles */
 }
 /* Desktops and laptops ----------- */
-@media only screen  and (min-width : 1224px) {
+@media only screen  and (min-width : 1024px) {
   .App {
     /*text-align: center;*/
     display: grid;
     grid-template-columns: [main-start] 260px [content-start] 850px [content-end main-end];
     grid-template-rows: [main-start] 110px [content-start] auto [content-end main-end] ;
     grid-column-gap: 32px;
+    justify-content: center;
   }
 
   .sort {
@@ -92,7 +116,32 @@ iPad 3
 
 /* Large screens ----------- */
 @media only screen  and (min-width : 1824px) {
-  /* Styles */
+  .App {
+    /*text-align: center;*/
+    display: grid;
+    grid-template-columns: [main-start] 260px [content-start] 850px [content-end main-end];
+    grid-template-rows: [main-start] 110px [content-start] auto [content-end main-end] ;
+    grid-column-gap: 32px;
+    justify-content: center;
+  }
+
+  .sort {
+    grid-column: content;
+    display: flex;
+    justify-content: flex-end;
+    /*height: 50px;*/
+  }
+
+  .content {
+    grid-column: content;
+    height: 450px;
+  }
+
+  .filter {
+    grid-column-start: main;
+    grid-row-start: content;
+    /*background-color: brown;*/
+  }
 }
 
 /* Base Application Styles */
